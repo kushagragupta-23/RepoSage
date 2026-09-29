@@ -1,0 +1,9 @@
+[project]
+name = "reposage"
+version = "1.0.0"
+description = "Local codebase intelligence and debugging RAG copilot built from Jio Institute GenAI Labs 1-6 patterns"
+requires-python = ">=3.10,<3.13"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
