@@ -1,0 +1,5 @@
+2026-09-25T10:14:03Z INFO api request_id=R100 route=/profile status=200
+2026-09-25T10:17:42Z ERROR db request_id=R101 error=ConnectionTimeoutError detail="could not acquire connection from pool within 5 seconds"
+2026-09-25T10:17:42Z WARN db request_id=R101 pool_size=5 active_connections=5 database_host=db.internal
+2026-09-25T10:18:11Z INFO auth request_id=R102 event=token_created expiry_minutes=30 algorithm=HS256
+2026-09-25T10:22:09Z ERROR api request_id=R103 error="Missing or invalid Bearer token" route=/profile status=401

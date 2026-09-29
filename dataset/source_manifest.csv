@@ -1,0 +1,16 @@
+document_id,relative_path,file_type,category,description,size_bytes
+DOC01,config/settings.yaml,yaml,configuration,structured app/security/database configuration,196
+DOC02,docs/api_reference.md,md,documentation,API endpoint behavior and authorization,350
+DOC03,docs/architecture.md,md,documentation,authentication and application architecture,1050
+DOC04,docs/deployment.md,md,documentation,"deployment, health checks, secret handling",584
+DOC05,docs/troubleshooting.md,md,documentation,debugging JWT and database failures,827
+DOC06,incidents/incident_001.md,md,incident_report,database timeout incident root cause and resolution,549
+DOC07,logs/app.log,log,application_logs,runtime authentication/database log evidence,530
+DOC08,logs/deployment.log,log,application_logs,deployment and database pool timeout evidence,354
+DOC09,src/api.py,py,source_code,protected profile endpoint and request flow,368
+DOC10,src/auth.py,py,source_code,JWT creation and Bearer-token validation,747
+DOC11,src/config.py,py,source_code,"environment configuration, JWT expiry, database pool settings",231
+DOC12,src/database.py,py,source_code,database connection/pool helpers,1062
+DOC13,src/security.py,py,source_code,password hashing and verification,328
+DOC14,src/user_service.py,py,source_code,user lookup and active-user validation,512
+DOC15,tests/test_auth.py,py,tests,expected Bearer header behavior,349

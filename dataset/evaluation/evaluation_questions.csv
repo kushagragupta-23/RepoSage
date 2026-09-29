@@ -1,0 +1,21 @@
+question_id,question,expected_source,expected_symbol
+Q01,How is token expiry configured?,src/config.py,
+Q02,Where are access-token expiration claims created?,src/auth.py,create_access_token
+Q03,What algorithm is associated with access tokens?,src/config.py,
+Q04,Why could a database connection time out?,logs/app.log,
+Q05,What is the default database pool size?,src/config.py,
+Q06,Which function checks the Bearer authorization header?,src/auth.py,validate_bearer_header
+Q07,Explain the authentication request flow.,docs/architecture.md,
+Q08,What should I check first for a database timeout?,docs/troubleshooting.md,
+Q09,What does the latest app log say about active database connections?,logs/app.log,
+Q10,Which function represents the protected profile request?,src/api.py,get_profile
+Q11,Should I hard-code a longer JWT expiry in auth.py?,docs/troubleshooting.md,
+Q12,Where is DATABASE_URL read from?,src/config.py,
+Q13,What happened in Incident 001 and what fixed it?,incidents/incident_001.md,
+Q14,What database pool size is declared in the YAML settings?,config/settings.yaml,
+Q15,Which document explains safe handling of JWT_SECRET during deployment?,docs/deployment.md,
+Q16,What endpoint requires a Bearer token according to the API reference?,docs/api_reference.md,
+Q17,Which function prevents inactive users from accessing protected resources?,src/user_service.py,require_active_user
+Q18,How are passwords verified in the demo service?,src/security.py,verify_password
+Q19,What did the deployment log report just before the database pool timeout?,logs/deployment.log,
+Q20,Which test verifies that a missing Bearer prefix is rejected?,tests/test_auth.py,test_validate_bearer_header_rejects_missing_prefix

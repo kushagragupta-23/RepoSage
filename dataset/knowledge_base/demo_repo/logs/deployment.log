@@ -1,0 +1,5 @@
+2026-09-20 10:00:01 INFO deployment started version=1.3.0
+2026-09-20 10:00:05 INFO api workers=4 database_pool_size=5
+2026-09-20 10:04:42 WARNING db_pool_wait_ms=8500 active_connections=5 pending_requests=3
+2026-09-20 10:04:44 ERROR database pool timeout after 10 seconds endpoint=/profile
+2026-09-20 10:05:10 INFO deployment health check status=healthy

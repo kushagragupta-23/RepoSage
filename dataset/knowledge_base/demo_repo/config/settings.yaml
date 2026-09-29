@@ -1,0 +1,11 @@
+app:
+  name: demo-auth-service
+  environment: development
+security:
+  access_token_expire_minutes: 30
+  algorithm: HS256
+database:
+  pool_size: 5
+  pool_timeout_seconds: 10
+logging:
+  level: INFO
