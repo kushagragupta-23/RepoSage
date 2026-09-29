@@ -1,25 +1,23 @@
-# RepoSage - Local Codebase Intelligence & Debugging Copilot
+# RepoSage
 
-**Project 1 of Kushagra's RAG portfolio**
-
-RepoSage lets a developer point to a local repository and ask questions such as:
+RepoSage indexes a local repository and lets you ask questions about its code, documentation and logs. For example:
 
 - "How is token expiry configured?"
 - "Which function validates the Bearer header?"
 - "Why could the database connection be timing out?"
 - "Explain the authentication request flow."
 
-It retrieves source code, docs and logs before generating a structured answer. The main RAG architecture intentionally follows **Sir's In-Class Labs 1-6** as closely as possible.
+It retrieves relevant files and symbols before producing an answer with observed evidence, likely causes and source locations. The main notebook follows the instructor's In-Class Labs 1-6 so the steps can be followed during a viva or code walkthrough.
 
-## What makes this more than a PDF chatbot?
+## What it indexes
 
-- Indexes an **arbitrary local repository**, not only bundled demo files.
-- Uses Python **AST-aware class/function indexing**.
-- Combines exact code-token retrieval (BM25) with semantic Chroma retrieval.
-- Separates **observed evidence** from **likely causes** in structured output.
-- Adds source path/symbol/line metadata.
-- Runs locally with **Ollama** for both embeddings and generation.
-- Includes CLI, Streamlit, FastAPI and retrieval evaluation.
+- It can index a local repository as well as the bundled example repository.
+- Python files are indexed with class and function information from the AST.
+- BM25 handles exact code tokens while Chroma handles semantic matches.
+- Answers keep observed evidence separate from likely causes.
+- Results include source paths, symbols and line metadata.
+- Ollama provides both embeddings and generation.
+- The repository includes CLI, Streamlit, FastAPI and retrieval-evaluation entry points.
 
 ## Sir-code mapping
 
@@ -65,9 +63,9 @@ python doctor.py
 ```
 
 
-# 2A. Bundled RAG dataset
+# 2A. Bundled example data
 
-The ZIP includes a complete ready-to-index corpus under `dataset/`:
+The repository includes a ready-to-index corpus under `dataset/`:
 
 - `dataset/knowledge_base/demo_repo/` - code, docs, config, logs, incidents and tests
 - `dataset/source_manifest.csv` - source-level metadata and descriptions
@@ -76,7 +74,7 @@ The ZIP includes a complete ready-to-index corpus under `dataset/`:
 
 The default `python ingest.py` command indexes this bundled dataset, so no external download is required for the first demo.
 
-# 3. Run the bundled demo
+# 3. Run the example
 
 ```powershell
 python cli.py "How is token expiry configured?"
@@ -84,7 +82,7 @@ python cli.py "Why could the database connection be timing out?"
 python cli.py "Explain the authentication flow."
 ```
 
-# 4. Index Kushagra's own repository
+# 4. Index another repository
 
 ```powershell
 python ingest.py --repo "C:\Users\Kushagra\Desktop\my-project"
@@ -142,13 +140,13 @@ Metrics:
 
 Do not put a retrieval score on the resume until this script has actually run on Kushagra's final machine/environment.
 
-# 8. Main notebook
+# 8. Notebook
 
 Open:
 
 `RepoSage_Sir_Style_RAG.ipynb`
 
-This is the viva-friendly version and intentionally shows the RAG pipeline in the same order as the six class labs.
+This notebook shows the RAG pipeline in the same order as the six class labs.
 
 # 9. Tests
 
@@ -158,7 +156,7 @@ pytest -q
 
 The unit tests check local repository loading, AST symbol extraction, secret-file exclusion, the evaluation set and notebook structure. Ollama-dependent integration is tested during `ingest.py`, `doctor.py` and the live demo rather than in unit tests.
 
-# 10. Suggested demo order
+# 10. Demo order
 
 See `DEMO_SCRIPT.md` and `VIVA_QA.md`.
 
