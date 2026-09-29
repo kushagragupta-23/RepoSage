@@ -1,0 +1,4 @@
+method,source_hit,symbol_hit,reciprocal_rank
+hybrid,0.7,1.0,0.352
+mmr,0.65,1.0,0.542
+similarity,0.6,1.0,0.508

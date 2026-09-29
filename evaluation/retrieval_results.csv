@@ -1,0 +1,61 @@
+question_id,method,question,expected_source,source_hit,symbol_hit,reciprocal_rank,retrieved_paths
+Q01,similarity,How is token expiry configured?,src/config.py,0,1,0.0,src/auth.py | docs/architecture.md | src/auth.py | config/settings.yaml
+Q02,similarity,Where are access-token expiration claims created?,src/auth.py,1,1,1.0,src/auth.py | src/auth.py | docs/architecture.md | config/settings.yaml
+Q03,similarity,What algorithm is associated with access tokens?,src/config.py,0,1,0.0,src/auth.py | docs/architecture.md | config/settings.yaml | src/auth.py
+Q04,similarity,Why could a database connection time out?,logs/app.log,0,1,0.0,docs/architecture.md | incidents/incident_001.md | docs/troubleshooting.md | src/database.py
+Q05,similarity,What is the default database pool size?,src/config.py,0,1,0.0,src/database.py | docs/architecture.md | logs/deployment.log | src/database.py
+Q06,similarity,Which function checks the Bearer authorization header?,src/auth.py,1,1,1.0,src/auth.py | tests/test_auth.py | src/api.py | tests/test_auth.py
+Q07,similarity,Explain the authentication request flow.,docs/architecture.md,1,1,0.3333333333333333,src/api.py | src/api.py | docs/architecture.md | docs/api_reference.md
+Q08,similarity,What should I check first for a database timeout?,docs/troubleshooting.md,1,1,0.5,docs/architecture.md | docs/troubleshooting.md | incidents/incident_001.md | logs/deployment.log
+Q09,similarity,What does the latest app log say about active database connections?,logs/app.log,0,1,0.0,src/database.py | src/database.py | logs/deployment.log | docs/architecture.md
+Q10,similarity,Which function represents the protected profile request?,src/api.py,1,1,1.0,src/api.py | src/api.py | docs/api_reference.md | src/user_service.py
+Q11,similarity,Should I hard-code a longer JWT expiry in auth.py?,docs/troubleshooting.md,0,1,0.0,src/auth.py | src/auth.py | src/config.py | config/settings.yaml
+Q12,similarity,Where is DATABASE_URL read from?,src/config.py,0,1,0.0,docs/architecture.md | src/database.py | src/database.py | src/database.py
+Q13,similarity,What happened in Incident 001 and what fixed it?,incidents/incident_001.md,1,1,1.0,incidents/incident_001.md | src/database.py | src/database.py | docs/architecture.md
+Q14,similarity,What database pool size is declared in the YAML settings?,config/settings.yaml,0,1,0.0,src/database.py | src/database.py | docs/architecture.md | src/database.py
+Q15,similarity,Which document explains safe handling of JWT_SECRET during deployment?,docs/deployment.md,1,1,1.0,docs/deployment.md | src/auth.py | src/auth.py | docs/api_reference.md
+Q16,similarity,What endpoint requires a Bearer token according to the API reference?,docs/api_reference.md,1,1,1.0,docs/api_reference.md | docs/architecture.md | tests/test_auth.py | src/auth.py
+Q17,similarity,Which function prevents inactive users from accessing protected resources?,src/user_service.py,1,1,1.0,src/user_service.py | src/user_service.py | src/api.py | src/user_service.py
+Q18,similarity,How are passwords verified in the demo service?,src/security.py,1,1,0.3333333333333333,config/settings.yaml | docs/architecture.md | src/security.py | src/api.py
+Q19,similarity,What did the deployment log report just before the database pool timeout?,logs/deployment.log,1,1,1.0,logs/deployment.log | incidents/incident_001.md | docs/architecture.md | docs/troubleshooting.md
+Q20,similarity,Which test verifies that a missing Bearer prefix is rejected?,tests/test_auth.py,1,1,1.0,tests/test_auth.py | tests/test_auth.py | tests/test_auth.py | src/auth.py
+Q01,mmr,How is token expiry configured?,src/config.py,1,1,0.3333333333333333,src/auth.py | config/settings.yaml | src/config.py | docs/deployment.md
+Q02,mmr,Where are access-token expiration claims created?,src/auth.py,1,1,1.0,src/auth.py | config/settings.yaml | docs/troubleshooting.md | src/auth.py
+Q03,mmr,What algorithm is associated with access tokens?,src/config.py,0,1,0.0,src/auth.py | config/settings.yaml | docs/api_reference.md | docs/architecture.md
+Q04,mmr,Why could a database connection time out?,logs/app.log,0,1,0.0,docs/architecture.md | incidents/incident_001.md | src/database.py | src/database.py
+Q05,mmr,What is the default database pool size?,src/config.py,0,1,0.0,src/database.py | docs/deployment.md | src/security.py | src/user_service.py
+Q06,mmr,Which function checks the Bearer authorization header?,src/auth.py,1,1,1.0,src/auth.py | docs/api_reference.md | docs/architecture.md | logs/deployment.log
+Q07,mmr,Explain the authentication request flow.,docs/architecture.md,1,1,0.5,src/api.py | docs/architecture.md | docs/architecture.md | src/config.py
+Q08,mmr,What should I check first for a database timeout?,docs/troubleshooting.md,0,1,0.0,docs/architecture.md | config/settings.yaml | src/user_service.py | src/security.py
+Q09,mmr,What does the latest app log say about active database connections?,logs/app.log,0,1,0.0,src/database.py | logs/deployment.log | config/settings.yaml | src/user_service.py
+Q10,mmr,Which function represents the protected profile request?,src/api.py,1,1,1.0,src/api.py | config/settings.yaml | src/security.py | logs/deployment.log
+Q11,mmr,Should I hard-code a longer JWT expiry in auth.py?,docs/troubleshooting.md,0,1,0.0,src/auth.py | config/settings.yaml | docs/deployment.md | src/security.py
+Q12,mmr,Where is DATABASE_URL read from?,src/config.py,0,1,0.0,docs/architecture.md | docs/api_reference.md | src/user_service.py | src/security.py
+Q13,mmr,What happened in Incident 001 and what fixed it?,incidents/incident_001.md,1,1,1.0,incidents/incident_001.md | src/database.py | src/auth.py | docs/deployment.md
+Q14,mmr,What database pool size is declared in the YAML settings?,config/settings.yaml,1,1,0.5,src/database.py | config/settings.yaml | docs/deployment.md | src/security.py
+Q15,mmr,Which document explains safe handling of JWT_SECRET during deployment?,docs/deployment.md,1,1,1.0,docs/deployment.md | src/auth.py | docs/api_reference.md | src/security.py
+Q16,mmr,What endpoint requires a Bearer token according to the API reference?,docs/api_reference.md,1,1,1.0,docs/api_reference.md | tests/test_auth.py | logs/app.log | src/auth.py
+Q17,mmr,Which function prevents inactive users from accessing protected resources?,src/user_service.py,1,1,1.0,src/user_service.py | src/api.py | config/settings.yaml | src/database.py
+Q18,mmr,How are passwords verified in the demo service?,src/security.py,1,1,0.5,config/settings.yaml | src/security.py | src/api.py | src/user_service.py
+Q19,mmr,What did the deployment log report just before the database pool timeout?,logs/deployment.log,1,1,1.0,logs/deployment.log | docs/architecture.md | docs/deployment.md | src/auth.py
+Q20,mmr,Which test verifies that a missing Bearer prefix is rejected?,tests/test_auth.py,1,1,1.0,tests/test_auth.py | src/user_service.py | config/settings.yaml | src/security.py
+Q01,hybrid,How is token expiry configured?,src/config.py,0,1,0.0,docs/troubleshooting.md | docs/api_reference.md | src/api.py | src/api.py | src/auth.py | docs/architecture.md | src/auth.py | config/settings.yaml
+Q02,hybrid,Where are access-token expiration claims created?,src/auth.py,1,1,0.5,docs/architecture.md | src/auth.py | docs/architecture.md | docs/troubleshooting.md | src/auth.py | config/settings.yaml
+Q03,hybrid,What algorithm is associated with access tokens?,src/config.py,0,1,0.0,src/user_service.py | docs/deployment.md | docs/troubleshooting.md | src/user_service.py | src/auth.py | docs/architecture.md | config/settings.yaml | src/auth.py
+Q04,hybrid,Why could a database connection time out?,logs/app.log,0,1,0.0,docs/architecture.md | docs/troubleshooting.md | incidents/incident_001.md | docs/deployment.md | src/database.py
+Q05,hybrid,What is the default database pool size?,src/config.py,0,1,0.0,docs/troubleshooting.md | docs/deployment.md | docs/architecture.md | incidents/incident_001.md | src/database.py | docs/architecture.md | logs/deployment.log | src/database.py
+Q06,hybrid,Which function checks the Bearer authorization header?,src/auth.py,1,1,1.0,src/auth.py | src/auth.py | docs/deployment.md | docs/architecture.md | tests/test_auth.py | src/api.py | tests/test_auth.py
+Q07,hybrid,Explain the authentication request flow.,docs/architecture.md,1,1,0.2,src/api.py | docs/api_reference.md | src/api.py | docs/troubleshooting.md | docs/architecture.md
+Q08,hybrid,What should I check first for a database timeout?,docs/troubleshooting.md,1,1,0.2,incidents/incident_001.md | docs/architecture.md | docs/deployment.md | docs/api_reference.md | docs/troubleshooting.md | logs/deployment.log
+Q09,hybrid,What does the latest app log say about active database connections?,logs/app.log,0,1,0.0,docs/architecture.md | incidents/incident_001.md | docs/deployment.md | docs/api_reference.md | src/database.py | logs/deployment.log
+Q10,hybrid,Which function represents the protected profile request?,src/api.py,1,1,0.2,src/user_service.py | docs/api_reference.md | src/user_service.py | src/user_service.py | src/api.py | src/api.py
+Q11,hybrid,Should I hard-code a longer JWT expiry in auth.py?,docs/troubleshooting.md,1,1,0.5,src/database.py | docs/troubleshooting.md | docs/architecture.md | src/auth.py | src/auth.py | src/config.py | config/settings.yaml
+Q12,hybrid,Where is DATABASE_URL read from?,src/config.py,1,1,0.3333333333333333,src/database.py | src/database.py | src/config.py | docs/deployment.md | docs/architecture.md | src/database.py
+Q13,hybrid,What happened in Incident 001 and what fixed it?,incidents/incident_001.md,1,1,0.5,src/database.py | incidents/incident_001.md | docs/architecture.md | docs/architecture.md
+Q14,hybrid,What database pool size is declared in the YAML settings?,config/settings.yaml,0,1,0.0,src/database.py | docs/deployment.md | incidents/incident_001.md | src/database.py | src/database.py | docs/architecture.md | src/database.py
+Q15,hybrid,Which document explains safe handling of JWT_SECRET during deployment?,docs/deployment.md,1,1,0.2,docs/troubleshooting.md | tests/test_auth.py | tests/test_auth.py | src/user_service.py | docs/deployment.md | src/auth.py | src/auth.py | docs/api_reference.md
+Q16,hybrid,What endpoint requires a Bearer token according to the API reference?,docs/api_reference.md,1,1,1.0,docs/api_reference.md | docs/architecture.md | docs/deployment.md | docs/architecture.md | tests/test_auth.py | src/auth.py
+Q17,hybrid,Which function prevents inactive users from accessing protected resources?,src/user_service.py,1,1,1.0,src/user_service.py | src/user_service.py | src/api.py | docs/troubleshooting.md | src/api.py | src/user_service.py
+Q18,hybrid,How are passwords verified in the demo service?,src/security.py,1,1,0.2,src/database.py | docs/architecture.md | docs/troubleshooting.md | config/settings.yaml | src/security.py | src/api.py
+Q19,hybrid,What did the deployment log report just before the database pool timeout?,logs/deployment.log,1,1,1.0,logs/deployment.log | incidents/incident_001.md | docs/troubleshooting.md | docs/deployment.md | docs/architecture.md
+Q20,hybrid,Which test verifies that a missing Bearer prefix is rejected?,tests/test_auth.py,1,1,0.2,docs/deployment.md | docs/api_reference.md | src/auth.py | src/auth.py | tests/test_auth.py | tests/test_auth.py | tests/test_auth.py | src/auth.py
